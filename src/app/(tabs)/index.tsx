@@ -9,6 +9,7 @@ export default function HomeFeedScreen() {
     <FlatList 
       data={posts}
       renderItem={({ item }) => <PostListItem post={item} />}
+      // keyExtractor={(post) => post._id} // only necessary if we do not have an id field
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{ gap: 5 }}
     />
